@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>login page</title>
+<title>Insert title here</title>
 </head>
-<body>
-<form action="validate" method="GET">
-User id:<input type="text" name="userID"> <br>
-Password:<input type="password" name="password"><br>
-<input type="submit" value="login">
+<body> 
+<form action="validate" method="post">
+
+User Id :<input type ="text" name="userID"></br>
+Password :<input type ="password" name="password">
+
+<input type="submit" value="submit">
+
 </form>
 </body>
 </html>
