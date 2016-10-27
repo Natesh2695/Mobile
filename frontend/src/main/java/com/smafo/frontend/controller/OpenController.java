@@ -19,7 +19,7 @@ public class OpenController {
 	{
 		if (id.equals("niit") && pwd.equals("niit"))
 		{
-			model.addAttribute("successmessage", "you sucessfully loggedin");
+			model.addAttribute("successmessage", "you sucessfully logged in");
 			return "index";
 			
 		}
@@ -42,5 +42,12 @@ public class OpenController {
 		model.addAttribute("Register", "true");
 		return "index";
 	}
+	@RequestMapping("/register")
+	public String Register(Model model)
+	{
+		model.addAttribute("Reg", "Registered Successfully");
+		return "login";
+	}
+
 
 }

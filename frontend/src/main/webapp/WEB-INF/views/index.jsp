@@ -23,5 +23,6 @@
 
 <c:out value="${successmessage}"></c:out>
 <c:out value="${errormessage}"></c:out>
+<c:out value="${Reg}"></c:out>
 </body>
 </html>

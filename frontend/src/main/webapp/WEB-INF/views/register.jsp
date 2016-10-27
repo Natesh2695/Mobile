@@ -7,6 +7,45 @@
 <title>Insert title here</title>
 </head>
 <body>
-this is a register page
- </body>
+ <div class="container" align="center">
+      <div class="freshdesignweb-top"><h1><i>SMAFO</i></h1></div><div class="clr"></div>
+			       
+      <div  class="form">
+    		<form id="contactform" action="register" > 
+    			<p class="contact"><label for="name">Name</label></p> 
+    			<input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text"> 
+    			 
+    			<p class="contact"><label for="email">Email</label></p> 
+    			<input id="email" name="email" placeholder="example@domain.com" required="" type="email"> 
+                
+                <p class="contact"><label for="username">Create a username</label></p> 
+    			<input id="username" name="username" placeholder="username" required="" tabindex="2" type="text"> 
+    			 
+                <p class="contact"><label for="password">Create a password</label></p> 
+    			<input type="password" id="password" name="password" required=""> 
+                <p class="contact"><label for="repassword">Confirm your password</label></p> 
+    			<input type="password" id="repassword" name="repassword" required=""> 
+        
+               <fieldset>
+                 <label>Birthday</label>
+                 <input type="date" naqme="date" >
+               </fieldset>
+  
+            <select class="select-style gender" name="gender">
+            <option value="select">Gender</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="others">Other</option>
+            </select><br><br>
+            
+            <p class="contact"><label for="phone">Mobile phone</label></p>
+                       <input id="phone" name="phone" placeholder="phone number" required="" type="number"> <br>
+            <input class="button" name="submit" id="submit" tabindex="5" value="Register" type="submit"> 	 
+            <input class="button" name="reset" id="reset" tabindex="5" value="Reset" type="Reset"> 	 
+   </form> 
+  </div>       
+</div>
+          
+            </body>
+
 </html>
