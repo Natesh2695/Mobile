@@ -9,25 +9,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.smafo.backend.dao.CategoryDAO;
-import com.smafo.backend.model.Category;
+import com.smafo.backend.dao.ProductDAO;
+import com.smafo.backend.model.Product;
+
+
 
 @SuppressWarnings("deprecation")
-@Repository("CategoryDAO")
-public class CategoryDAOImpl implements CategoryDAO  {
+@Repository("productDAO")
+public class ProductDAOImpl implements ProductDAO  {
 	
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public CategoryDAOImpl(SessionFactory sessionFactory)
+	public ProductDAOImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory=sessionFactory;
 	}
 @Transactional
-	public boolean save(Category category) {
+	public boolean save(Product product) {
 		// TODO Auto-generated method stub
 	try {
-		sessionFactory.getCurrentSession().save(category);
+		sessionFactory.getCurrentSession().save(product);
 		return true;
 	} catch (HibernateException e) {
 		// TODO Auto-generated catch block
@@ -37,10 +39,10 @@ public class CategoryDAOImpl implements CategoryDAO  {
 		
 	}
 
-	public boolean update(Category category) {
+	public boolean update(Product product) {
 		// TODO Auto-generated method stub
 		try {
-			sessionFactory.getCurrentSession().update(category);
+			sessionFactory.getCurrentSession().update(product);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -49,10 +51,10 @@ public class CategoryDAOImpl implements CategoryDAO  {
 		}
 	}
 
-	public boolean delete(Category category) {
+	public boolean delete(Product product) {
 		// TODO Auto-generated method stub
 		try {
-			sessionFactory.getCurrentSession().delete(category);
+			sessionFactory.getCurrentSession().delete(product);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -62,15 +64,15 @@ public class CategoryDAOImpl implements CategoryDAO  {
 		
 	}
 
-	public Category get(String id) {
+	public Product get(String id) {
 		// TODO Auto-generated method stub
-	return (Category)sessionFactory.getCurrentSession().get(Category.class,id);
+	return (Product)sessionFactory.getCurrentSession().get(Product.class,id);
 		
 	}
 @Transactional
-	public List<Category> list() {
+	public List<Product> list() {
 		// TODO Auto-generated method stub
-		String hql = "from Category";
+		String hql = "from Product";
 				Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		return query.list();
 		

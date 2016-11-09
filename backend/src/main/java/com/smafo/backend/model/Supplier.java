@@ -1,7 +1,13 @@
 package com.smafo.backend.model;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+@Entity
+@Component
+@Table
 public class Supplier {
 	
 @Id 

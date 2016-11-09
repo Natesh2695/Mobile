@@ -1,11 +1,18 @@
 package com.smafo.backend.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Component;
 
 @Component 
+@Entity
+@Table
 public class Category { 
-	
+	@Id 
 	private String id;
+	
 	private String name;
 	private String description;
 	public String getId() {

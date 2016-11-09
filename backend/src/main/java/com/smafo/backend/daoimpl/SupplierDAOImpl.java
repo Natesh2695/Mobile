@@ -9,25 +9,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.smafo.backend.dao.CategoryDAO;
-import com.smafo.backend.model.Category;
+import com.smafo.backend.dao.SupplierDAO;
+import com.smafo.backend.model.Supplier;
 
 @SuppressWarnings("deprecation")
-@Repository("CategoryDAO")
-public class CategoryDAOImpl implements CategoryDAO  {
+@Repository("SupplierDAO")
+public class SupplierDAOImpl implements SupplierDAO  {
 	
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public CategoryDAOImpl(SessionFactory sessionFactory)
+	public SupplierDAOImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory=sessionFactory;
 	}
 @Transactional
-	public boolean save(Category category) {
+	public boolean save(Supplier supplier) {
 		// TODO Auto-generated method stub
 	try {
-		sessionFactory.getCurrentSession().save(category);
+		sessionFactory.getCurrentSession().save(supplier);
 		return true;
 	} catch (HibernateException e) {
 		// TODO Auto-generated catch block
@@ -37,10 +37,10 @@ public class CategoryDAOImpl implements CategoryDAO  {
 		
 	}
 
-	public boolean update(Category category) {
+	public boolean update(Supplier supplier) {
 		// TODO Auto-generated method stub
 		try {
-			sessionFactory.getCurrentSession().update(category);
+			sessionFactory.getCurrentSession().update(supplier);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -49,10 +49,10 @@ public class CategoryDAOImpl implements CategoryDAO  {
 		}
 	}
 
-	public boolean delete(Category category) {
+	public boolean delete(Supplier supplier) {
 		// TODO Auto-generated method stub
 		try {
-			sessionFactory.getCurrentSession().delete(category);
+			sessionFactory.getCurrentSession().delete(supplier);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -62,15 +62,15 @@ public class CategoryDAOImpl implements CategoryDAO  {
 		
 	}
 
-	public Category get(String id) {
+	public Supplier get(String id) {
 		// TODO Auto-generated method stub
-	return (Category)sessionFactory.getCurrentSession().get(Category.class,id);
+	return (Supplier)sessionFactory.getCurrentSession().get(Supplier.class,id);
 		
 	}
 @Transactional
-	public List<Category> list() {
+	public List<Supplier> list() {
 		// TODO Auto-generated method stub
-		String hql = "from Category";
+		String hql = "from Supplier";
 				Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		return query.list();
 		
