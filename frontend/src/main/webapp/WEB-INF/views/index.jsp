@@ -12,7 +12,8 @@
 <body>
 
 <jsp:include page="header.jsp"></jsp:include>
-        
+<jsp:include page="carousel.jsp"></jsp:include> 
+<jsp:include page="thumbnail.jsp"></jsp:include>    
 <hr>
 <c:if test="${Login}">
 <jsp:include page="login.jsp"></jsp:include>
@@ -24,5 +25,7 @@
 <c:out value="${successmessage}"></c:out>
 <c:out value="${errormessage}"></c:out>
 <c:out value="${Reg}"></c:out>
+
+<jsp:include page="footer.jsp"></jsp:include>     
 </body>
 </html>

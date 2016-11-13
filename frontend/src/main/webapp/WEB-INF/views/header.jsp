@@ -19,17 +19,30 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Smafo</a>
     </div>
+   
     <ul class="nav navbar-nav pull-left">
       <li><a href="#">Home</a></li>
       <li><a href="#">Sony</a></li>
       <li><a href="#">Apple</a></li>
       <li><a href="#">Samsung</a></li>
-
+                 </li>
     </ul>
-    <ul class="nav navbar-nav pull-right">
+    <ul class="nav navbar-nav pull-middle">
+     <nav class="navbar navbar-light bg-faded">
+  <form class="form-inline float-xs-right">
+  
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+    
+  </form>
+</nav>
+
+            </ul>
+           <i class="glyphicon glyphicon-align-right"></i>
+<ul class="nav navbar-nav pull-right">
     <c:if test="${empty successmessage  }">
       <li><a href="Login"><span class="glyphicon glyphicon-log-in">login</span></a></li>
-      <li><a href="Register"><span class="glyphicon glyphicon-user">Register</a></li>
+      <li><a href="Register"><span class="glyphicon glyphicon-user">Register</span></a></li>
       </c:if>
     </ul >
     <ul class="nav navbar-nav pull-right">

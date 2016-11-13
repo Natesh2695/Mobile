@@ -13,6 +13,7 @@ public class OpenController {
 	{
 		return "index";
 	}
+	
 	@RequestMapping("/validate")
 	
 	public String validate(@RequestParam("userID") String id, @RequestParam("password") String pwd,Model model)
