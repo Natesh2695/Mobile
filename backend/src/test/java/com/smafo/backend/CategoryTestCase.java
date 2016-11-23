@@ -1,7 +1,5 @@
 package com.smafo.backend;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -23,13 +21,14 @@ static Category Category;
 static CategoryDAO categoryDAO;
 
 @BeforeClass
+@Autowired
 public static void init()
 {
 	context = new AnnotationConfigApplicationContext();
-	context.scan("com.smafo.backend");
+	context.scan("com.smafo");
 	context.refresh();
 	categoryDAO =(CategoryDAO) context.getBean("CategoryDAO");
-	Category =(Category)context.getBean("Category");
+	 Category =(Category)context.getBean("Category");
 	System.out.println("the objects are created");
 	}
 //start writing Junit Test cases

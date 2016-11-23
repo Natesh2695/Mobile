@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.smafo.backend.model.Category;
 
 @Configuration
-@ComponentScan("com.smafo.frontend")
+@ComponentScan("com.smafo")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 
@@ -25,7 +25,7 @@ public class ApplicationContextConfig {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 			
-		dataSource.setUrl("jdbc:h2:~/test");
+		dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
 
 		dataSource.setDriverClassName("org.h2.Driver");
 
@@ -48,7 +48,7 @@ public class ApplicationContextConfig {
 
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
-		sessionBuilder.addAnnotatedClass(Category.class);
+		
 			return sessionBuilder.buildSessionFactory();
 	}
 

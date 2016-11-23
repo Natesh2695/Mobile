@@ -8,6 +8,11 @@
   <name>frontend Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  <dependency>
+    <groupId>com.smafo</groupId>
+    <artifactId>backend</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    </dependency>
    <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
     <groupId>junit</groupId>

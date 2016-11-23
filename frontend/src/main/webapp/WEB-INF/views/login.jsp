@@ -9,7 +9,7 @@
 <body> 
 <form action="validate" method="post">
 
-User Id :<input type ="text" name="userID"></br>
+User Id :<input type ="text" name="userID"></br>	
 Password :<input type ="password" name="password">
 
 <input type="submit" value="submit">

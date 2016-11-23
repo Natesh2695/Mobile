@@ -84,9 +84,9 @@ $(document).ready(function() {
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="row">
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img src="http://stat.homeshop18.com/homeshop18/images/productImages/843/lava-iris-250-dual-sim-android-mobile-phone-white-medium_7603ffe52ea40b3f8248805514b0db73.jpg" alt="Image" class="img-responsive"></a>
                             </div>
-                            <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
+                            <div class="col-sm-3"><a href="#x"><img src="http://stat.homeshop18.com/homeshop18/images/productImages/126/micromax-canvas-turbo-a250-dual-sim-android-mobile-phone-medium_359d33ce0de323788f041e0b56f1e21c.jpg" alt="Image" class="img-responsive"></a>
                             </div>
                             <div class="col-sm-3"><a href="#x"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
                             </div>

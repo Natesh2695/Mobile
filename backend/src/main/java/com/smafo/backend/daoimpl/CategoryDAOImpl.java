@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.smafo.backend.dao.CategoryDAO;
 import com.smafo.backend.model.Category;
 
-@SuppressWarnings("deprecation")
 @Repository("CategoryDAO")
 public class CategoryDAOImpl implements CategoryDAO  {
 	
