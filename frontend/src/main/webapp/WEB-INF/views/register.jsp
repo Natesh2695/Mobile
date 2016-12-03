@@ -11,7 +11,7 @@
       <div class="freshdesignweb-top"><h1><i>SMAFO</i></h1></div><div class="clr"></div>
 			       
       <div  class="form">
-    		<form id="contactform" action="register" > 
+    		<form id="contactform" action="registerhere" > 
     			<p class="contact"><label for="name">Name</label></p> 
     			<input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text"> 
     			 
@@ -39,7 +39,7 @@
             
             <p class="contact"><label for="phone">Mobile phone</label></p>
                        <input id="phone" name="phone" placeholder="phone number" required="" type="phonenumber"> <br>
-            <input class="button" name="submit" id="submit" tabindex="1" value="Register" type="submit"> 	 
+            <input class="button" name="submit" id="submit" tabindex="1" value="register" type="submit"> 	 
             <input class="button" name="reset" id="reset" tabindex="1" value="Reset" type="Reset"> 	 
    </form> 
   </div>       

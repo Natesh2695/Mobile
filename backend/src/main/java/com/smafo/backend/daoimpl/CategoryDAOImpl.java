@@ -1,5 +1,4 @@
 package com.smafo.backend.daoimpl;
-
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -12,68 +11,75 @@ import org.springframework.transaction.annotation.Transactional;
 import com.smafo.backend.dao.CategoryDAO;
 import com.smafo.backend.model.Category;
 
-@Repository("CategoryDAO")
-public class CategoryDAOImpl implements CategoryDAO  {
-	
+
+@Repository("categoryDAO")
+public class CategoryDAOImpl implements CategoryDAO {
+
 	@Autowired
 	SessionFactory sessionFactory;
 	
 	public CategoryDAOImpl(SessionFactory sessionFactory)
 	{
-		this.sessionFactory=sessionFactory;
+	 this.sessionFactory=sessionFactory;
 	}
-@Transactional
+	
+	@Autowired
+	@Transactional
 	public boolean save(Category category) {
-		// TODO Auto-generated method stub
-	try {
-		sessionFactory.getCurrentSession().save(category);
-		return true;
-	} catch (HibernateException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		return false;
-	}
+		
+		try {
+			sessionFactory.getCurrentSession().save(category);
+			return true;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			return false;
+		}
 		
 	}
 
+	@Transactional
 	public boolean update(Category category) {
-		// TODO Auto-generated method stub
+		
 		try {
 			sessionFactory.getCurrentSession().update(category);
 			return true;
 		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
 	}
 
+	@Transactional
 	public boolean delete(Category category) {
-		// TODO Auto-generated method stub
 		try {
+				if(get(category.getId())==null)
+				{
+					return false;
+				}
 			sessionFactory.getCurrentSession().delete(category);
 			return true;
 		} catch (HibernateException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
 		
 	}
 
+	@Transactional
 	public Category get(String id) {
-		// TODO Auto-generated method stub
-	return (Category)sessionFactory.getCurrentSession().get(Category.class,id);
+		return(Category) sessionFactory.openSession().get(Category.class,id);
+		
+
 		
 	}
-@Transactional
+
+	@Transactional
 	public List<Category> list() {
-		// TODO Auto-generated method stub
-		String hql = "from Category";
-				Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		return query.list();
-		
+		String hql="from Category";
+		Query query= sessionFactory.getCurrentSession().createQuery(hql);
+	    return  query.list();
 	}
- 
-	
-}
+	public Category delete(String id){
+		return null;
+	}
+	}
